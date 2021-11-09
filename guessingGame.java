@@ -12,7 +12,7 @@ public class guessingGame
   int computerValue = randomNumber.nextInt(100);
   int success = 0;
   int guess = 0;
-  String answer = "y";
+  String answer = "";
 
 
   
@@ -33,9 +33,9 @@ public class guessingGame
            else if (guess == computerValue){
               success++;
               System.out.println("You got it!");
-              System.out.print("Do you want to guess a new number (y/n): ");
-              answer = kbd.nextLine();
-              if (answer.equals("y")){
+              System.out.println("Do you want to guess a new number (yes/no): ");
+              answer = kbd.next();
+              if (answer.equals("yes")){
                System.out.println("please enter an integer betwen 1 and 100 inclusive: ");
                guess = kbd.nextInt();
               }
